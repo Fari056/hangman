@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(5, 11, 31);
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    overflow: hidden;
+    height: 80vh;
+}
+h1{
+    margin: 20px 0 0;
+}
+.fig-container{
+    fill: transparent;
+    stroke: rgb(153, 255, 255);
+    stroke-width: 4px;
+    /* stroke-linecap:round; */
+    stroke-linecap: square;
+    /* border-bottom: 1px solid #111; */
+}
+.figure{
+    display: none;
+}
+.mian-container{
+    padding: 20px 30px;
+    margin: auto;
+    position: relative;
+    height: 350px;
+    width: 450px;
+}
+.wrong-letter-container{
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    flex-direction: column;
+    align-items: right;
+}
+.wrong-letter-container p{
+margin: 0 0 5px;
+color: rgb(238, 63, 63);
+}
+.wrong-letter-container span{
+    font-size: 20px;
+}
+.words{
+    /* margin-top: 50px; */
+    /* padding: 19px; */
+    display: flex;
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* position: inline-block; */
+}
+.letters{
+    display: inline-block;
+    margin: 0 3px ;
+    border-bottom: 2px solid #298b92;
+    font-size: 30px;
+    align-items: center;
+    text-align: center;
+    height: 40px;
+    width: 20px;
+}
+.popup-container{
+    background-color: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    display: flex;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.popup{
+    background: #2980b9;
+    padding: 20px;
+    text-align: center;
+    /* display: flex ; */
+    box-shadow: 0 1px 15px 10px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+.popup button{
+    cursor: pointer;
+    padding: 12px 20px;
+    margin-top: 20px;
+    color: #2980b9;
+    font-size: 16px;
+    /* border-radius: 5px; */
+}
+.popup button:active{
+    transform: scale(0.97);
+    /* outline: 0; */
+}
+.popup button:focus{
+    outline: 0;
+}
+.notification{
+    background: rgba(0,0,0,0.5);
+    padding: 5px 15px;
+    border-radius: 10px 10px 0 0;
+    position: absolute; 
+    bottom: -50px;
+    transition: transform 0.3s ease-in-out;
+}
+.notification p{
+    margin: 0;
+}
+.notification.show{
+transform: translateY(-50px);
+}
